@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import BlogPost
 
-# Register your models here.
+#管理サイトにBlogPostを登録する
+admin.site.register(BlogPost)
