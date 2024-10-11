@@ -10,6 +10,8 @@ class IndexView(ListView):
     #model = BlogPost
     
     queryset = BlogPost.objects.order_by('-posted_at')
+    
+    paginate_by = 4
 
 
 class BlogDetail(DetailView):
