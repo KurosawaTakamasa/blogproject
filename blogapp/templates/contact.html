@@ -29,8 +29,16 @@
                     以下のフォームに記入してメッセージを送信してください。
                     できるだけ早くご連絡します。
                 </strong>
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{message}}
+                    </div>
+                    {% endfor %}
+                {% endif %}
                 <div class="my-5">
                     <form method="POST">
+                        {% csrf_token %}
                         {% for field in form %}
                         <div class="form-floating">
                             <div class="form-group floating-label-group controls">
