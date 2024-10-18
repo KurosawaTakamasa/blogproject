@@ -24,6 +24,10 @@ urlpatterns = [
          views.MusicView.as_view(),
          name='music_list'),
     
+    path('contact/',
+         views.ContactView.as_view(),
+         name='contact'),
+    
     
     
 ]
